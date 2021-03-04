@@ -1,6 +1,6 @@
 
-const fs = require('fs')
-const csv = require('csvtojson')
+import fs from 'fs';
+import csv from 'csvtojson';
 
 async function writeCSVFile() {
   try {
@@ -19,8 +19,9 @@ async function writeCSVFile() {
     jsonArray.forEach(function (item) {
       textFile.write((JSON.stringify(item)).replace(/"|{|}/g, ' ') + "\r\n")
     });
+    console.log("Write file successfully");
   } catch (err) {
-    console.log(err);
+    console.log("Error occur");
   }
 }
 writeCSVFile();

@@ -1,4 +1,4 @@
-const readline = require('readline');
+import readline from 'readline';
 
 console.log("Type your input:");
 const rl = readline.createInterface({
